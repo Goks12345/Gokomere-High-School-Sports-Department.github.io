@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokomere High School Sports</title>
+<style>
+body { margin:0; font-family: Arial, sans-serif; background:BurlyWood; }
+  body {
+            /* Set the background image */
+            background-image: url('sports.jpg');
+
+            /* Make it cover the whole page */
+            background-size: cover;
+
+            /* Center the image */
+            background-position: center;
+
+            /* Prevent repeating */
+            background-repeat: no-repeat;
+
+            /* Keep it fixed when scrolling */
+            background-attachment: fixed;
+
+            /* Optional: Set a fallback background color */
+            background-color: #f0f0f0;
+        }
+
+header { background:#001f4d; color:orange; text-align:center; padding:30px 20px; }
+header h1 { margin:0; font-size:2.5em; }
+header h2 { margin-top:10px; font-weight:400; }
+nav { background:#001f4d; display:flex; justify-content:center; padding:10px 0; }
+nav button { background:none; border:none; color:orange; margin:0 15px; font-size:1.1em; font-weight:bold; cursor:pointer; transition:0.3s; }
+nav button:hover { color:orange; }
+section { padding:60px 20px; display:none; min-height:70vh; }
+section.active { display:block; }
+h2 { text-align:center; color:red; margin-bottom:20px; }
+p { max-width:800px; margin:14px auto; line-height:1.8;; color:red; }
+.card-container { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
+.card { background:Salmon; padding:20px; width:260px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.2); text-align:center; }
+.card img { width:100%; border-radius:12px; margin-bottom:15px; }
+.card h3 { margin-bottom:10px; color:#003366; }
+.gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
+.gallery img { width:250px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:0.3s; }
+.gallery img:hover { transform:scale(1.05); }
+button.action { background:#003366; color:red; border:none; padding:12px 25px; cursor:pointer; border-radius:5px; font-size:1em; transition:0.3s; margin-top:10px; }
+button.action:hover { background:#0055aa; }
+footer { background:dark violet; color:gold; text-align:center; padding:20px; font-size:0.9em; }
+</style>
+<script>
+function showSection(id) {
+    // hide all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    // show the selected section
+    document.getElementById(id).classList.add('active');
+}
+function showMessage(msg) {
+    alert(msg);
+}
+</script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Gokomere High School Sports Department</h1>
+    <h2>Sports Department</h2>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('teams')">Teams</button>
+<button onclick="showSection('activities')">Activities</button>
+
+    <button onclick="showSection('schedule')">Schedule</button>
+    <button onclick="showSection('achievements')">Achievements</button>
+    <button onclick="showSection('gallery')">Gallery</button>
+    <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<!-- Sections -->
+<section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Welcome to Gokomere High School Sports Department! We aim to develop talented athletes, foster teamwork, and promote leadership through sports.</p>
+    <p>Our programs include football, basketball, athletics, swimming, and more. Every student has an opportunity to participate, improve skills, and compete at regional and national levels.</p>
+    <button class="action" onclick="showMessage('Thank you for supporting Gokomere High School Sports!')">Support Our Teams</button>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Gokomere High School Sports Department has a proud history of nurturing champions. Our mission is to provide students with high-quality sports programs that teach discipline, resilience, and teamwork.</p>
+    <p>We offer experienced coaching, well-maintained facilities, and regular participation in competitions. Through our programs, students develop athletic skills, character, and leadership qualities.</p>
+</section>
+
+<section id="teams">
+    <h2>Our Teams</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="IMG-20250214-WA0007.webp"alt="Football Team">
+            <h3>Football Team</h3>
+            <p>Coach: Mr. Mutenje</p>
+<p>Team:Hwede</p>
+<p>Ario</p>
+<p>Ramsey</p>
+<p>Salah</p>
+<p>Jex</p>
+<p>Chipfere</p>
+<p>Agape</p>
+<p>Bright</p>
+<p>Kuda</p>
+<p>Kwera</p>
+<p>Chigaba</p>
+            <p>Trains weekly and competes in city and national championships.</p>
+        </div>
+        <div class="card">
+            <img src="Basketball.jpeg" alt="Basketball Team">
+            <h3>Basketball Team</h3>
+            <p>Coach: Mr.Mushangwe </p>
+<p>Team : Besent</p>
+<p>Mambave</p>
+<p>Forty</p>
+<p>Wale</p>
+<p>Jonathan</p>
+
+            <p>Known for speed, coordination, and winning regional tournaments.</p>
+        </div>
+        <div class="card">
+            <img src="Athletics.jpeg" alt="Athletics Team">
+            <h3>Athletics Team</h3>
+            <p>Coach: Mr. Gwata</p>
+            <p>Represents the school in national competitions from sprints to long-distance races.</p>
+        </div>
+        <div class="card">
+            <img src="Ragby.jpeg" alt="Swimming Team">
+            <h3>Ragby team</h3>
+            <p>Coach: Mr. Muperi </p>
+            <p>Competes at regional meets and trains in technique, stamina, and discipline.</p>
+        </div>
+    </div>
+</section>
+
+<section id="schedule">
+    <h2>Upcoming Matches & Events</h2>
+    <p>February 15 - Football vs St. George’s College</p>
+    <p>February 20 - Athletics District Competitions</p>
+ <p>February 21 - Bread Football Games</p>
+
+    <p>Februal 25 - Athletics Provincial Competitions</p>
+    <p>March 6 - Athletics National competitions</p>
+    <p>March 15 - Volleyball competitions </p>
+<p>March 17 - Basketball competitions </p>
+<p>March 20 - Ragby competitions </p>
+<p>March 27 - Tennis competitions </p>
+
+    <button class="action" onclick="showMessage('Come watch our events and support our teams!')">Attend an Event</button>
+</section>
+
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Football Champions 2025</h3>
+            <p>Our football team won the regional championship after years of dedicated training.</p>
+        </div>
+        <div class="card">
+            <h3>Basketball Winners 2024</h3>
+            <p>The basketball team secured the city championship, showcasing teamwork and skill.</p>
+        </div>
+        <div class="card">
+            <h3>Athletics Medals</h3>
+            <p>Students achieved gold and silver medals in national athletics competitions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="230323Academy-1.jpg" alt="Football Match">
+        <img src="Football.jpg" alt="Basketball Game">
+        <img src="IMG-20250214-WA0007.webp" alt="Athletics Event">
+        <img src="Screenshot_17-2-2026_205847_www.instagram.com.jpeg" alt="Swimming Competition">
+        <img src="Screenshot_17-2-2026_205738_www.instagram.com.jpeg" alt="Team Celebration">
+<img src="pexels-case-originals-3639065.jpg" alt="Team Celebration">
+<img src="pexels-harrisonhaines-3536487.jpg" alt="Team Celebration">
+<img src="pexels-rethaferguson-3886237.jpg" alt="Team Celebration">
+<img src="pexels-chrofit-the-man-to-call-2515393-5756239.jpg" alt="Team Celebration">
+<img src="pexels-ketut-subiyanto-4719821.jpg" alt="Team Celebration">
+<img src="" alt="Team Celebration">
+<img src="" alt="Team Celebration">
+<img src="" alt="Team Celebration">
+<img src="" alt="Team Celebration">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: sports@gokomerehigh.ac.zw</p>
+    <p>Phone: +263 772 144 538 / +263 772 144 539</p>
+    <p>Address: Gokomere High School, Masvingo, Zimbabwe</p>
+    <p>Follow us on social media for updates and announcements.</p>
+</section>
+
+<section id="activities">
+    
+<h2>Overview</h2>
+<p>Gokomere high school has indeed been the talk of the province and the nation in the area of sport. The institution has produced footballers like Tauya Murehwa, a medical doctor and a national team player and former Dynamos player, Johnson Zimbabe, Ovidy Karuru to mention a few. In the field of chess personalities like Svinurai Chakurira, Kudzanai Mamombe (current grandmaster) have been produced from this institution
+
+Each student chooses a sporting activity he/she likes or where he/she does best. After rigorous trials, a student is now selected into the school team by their coaches, based on their competence. Sporting activities/training are done during the week, from 1520 hrs to 1645 hrs daily. For intra-school competitions, the student body is divided into four groups referred to as Houses these are named 1, 2, 3, and 4.</p>
+    <div class="activities">
+        <img src="goks.jpeg" alt="Soccer">
+
+        <img src="goks2.jpeg" alt="Athletics">
+       
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Gokomere High School Sports Department</p>
+</footer>
+
+<script>
+// Show Home section by default
+showSection('home');
+</script>
+
+</body>
+</html>
